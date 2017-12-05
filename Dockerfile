@@ -23,9 +23,11 @@ RUN apk add --no-cache \
     && ln -s /usr/bin/python3 /usr/bin/python \
     && cd /unoconvservice \
     && mkdir -p uploads \
-    && npm install --production \
+    && yarn --production \
     && apk del git curl \
     && rm -rf /var/cache/apk/*
+
+ADD ./bookman-old-style /usr/share/fonts/bookman-old-style
 
 WORKDIR /unoconvservice
 
