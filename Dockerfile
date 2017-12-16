@@ -27,7 +27,9 @@ RUN apk add --no-cache \
     && apk del git curl \
     && rm -rf /var/cache/apk/*
 
+# Fonts:
 ADD ./bookman-old-style /usr/share/fonts/bookman-old-style
+ADD ./wingdings /usr/share/fonts/wingdings
 
 WORKDIR /unoconvservice
 
